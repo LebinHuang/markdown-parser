@@ -20,4 +20,89 @@ public class MarkdownParseTest {
         test.add("some-thing.html");
         assertEquals(test, links);
     }
+
+    @Test
+    public void getLinks2() throws IOException{
+        Path fileName = Path.of("/Users/huanglebin/Documents/GitHub/markdown-parser/test-file2.md");
+        String content = Files.readString(fileName);
+        ArrayList<String> links = MarkdownParse.getLinks(content);
+        ArrayList<String> test = new ArrayList<>();
+        test.add("https://something.com");
+        test.add("some-thing.html");
+        System.out.println("Test2: "+links);
+        assertEquals(test, links);
+    }
+
+    @Test
+    public void getLinks3() throws IOException{
+        Path fileName = Path.of("/Users/huanglebin/Documents/GitHub/markdown-parser/test-file3.md");
+        String content = Files.readString(fileName);
+        ArrayList<String> links = MarkdownParse.getLinks(content);
+        ArrayList<String> test = new ArrayList<>();
+        test.add("https://something.com");
+        test.add("some-thing.html");
+        System.out.println("Test3: "+links);
+        assertEquals(test, links);
+        
+    }
+    
+    @Test
+    public void getLinks4() throws IOException{
+        Path fileName = Path.of("/Users/huanglebin/Documents/GitHub/markdown-parser/test-file4.md");
+        String content = Files.readString(fileName);
+        ArrayList<String> links = MarkdownParse.getLinks(content);
+        ArrayList<String> test = new ArrayList<>();
+        test.add("https://something.com");
+        test.add("some-thing.html");
+        System.out.println("Test4: "+links);
+        assertEquals(test, links);
+    }
+
+    @Test
+    public void getLinks5() throws IOException{
+        Path fileName = Path.of("/Users/huanglebin/Documents/GitHub/markdown-parser/test-file5.md");
+        String content = Files.readString(fileName);
+        ArrayList<String> links = MarkdownParse.getLinks(content);
+        ArrayList<String> test = new ArrayList<>();
+        test.add("https://something.com");
+        test.add("some-thing.html");
+        System.out.println("Test5: "+links);
+        assertEquals(test, links);
+    }
+    @Test
+
+    public void getLinks6() throws IOException{
+        Path fileName = Path.of("/Users/huanglebin/Documents/GitHub/markdown-parser/test-file6.md");
+        String content = Files.readString(fileName);
+        ArrayList<String> links = MarkdownParse.getLinks(content);
+        ArrayList<String> test = new ArrayList<>();
+        test.add("https://something.com");
+        test.add("some-thing.html");
+        System.out.println("Test6: "+links);
+        assertEquals(test, links);
+    }
+
+    @Test
+    public void getLinks7() throws IOException{
+        Path fileName = Path.of("/Users/huanglebin/Documents/GitHub/markdown-parser/test-file7.md");
+        String content = Files.readString(fileName);
+        ArrayList<String> links = MarkdownParse.getLinks(content);
+        ArrayList<String> test = new ArrayList<>();
+        test.add("https://something.com");
+        test.add("some-thing.html");
+        System.out.println("Test7: "+links);
+        assertEquals(test, links);
+    }
+
+    @Test
+    public void getLinks8() throws IOException{
+        Path fileName = Path.of("/Users/huanglebin/Documents/GitHub/markdown-parser/test-file8.md");
+        String content = Files.readString(fileName);
+        ArrayList<String> links = MarkdownParse.getLinks(content);
+        ArrayList<String> test = new ArrayList<>();
+        test.add("https://something.com");
+        test.add("some-thing.html");
+        System.out.println("Test8: "+links);
+        assertEquals(test, links);
+    }
 }
