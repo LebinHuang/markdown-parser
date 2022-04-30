@@ -23,10 +23,7 @@ public class MarkdownParse {
                 toReturn.add(markdown.substring(openParen + 1, closeParen));
                 currentIndex = closeParen + 1;
             }
-            else if (open != -1){
-                toReturn.add(markdown.substring(open + 1, close));
-                currentIndex = close + 1;
-            }
+            
             else{
                 currentIndex = markdown.length();
             }
