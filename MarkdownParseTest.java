@@ -85,15 +85,7 @@ public class MarkdownParseTest {
         assertEquals(test, links);
     }
 
-    @Test
-    public void getLinks8() throws IOException{
-        Path fileName = Path.of("/Users/huanglebin/Documents/GitHub/markdown-parser/test-file8.md");
-        String content = Files.readString(fileName);
-        ArrayList<String> links = MarkdownParse.getLinks(content);
-        ArrayList<String> test = new ArrayList<>();
-        System.out.println("Test8: "+links);
-        assertEquals(test, links);
-    }
+    
 
     @Test
     public void getLinks9() throws IOException{
