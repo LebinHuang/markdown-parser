@@ -29,7 +29,6 @@ public class MarkdownParseTest {
         ArrayList<String> test = new ArrayList<>();
         test.add("https://something.com");
         test.add("some-page.html");
-        System.out.println("Test2: "+links);
         assertEquals(test, links);
     }
 
@@ -84,8 +83,6 @@ public class MarkdownParseTest {
         System.out.println("Test7: "+links);
         assertEquals(test, links);
     }
-
-    
 
     @Test
     public void getLinks9() throws IOException{
