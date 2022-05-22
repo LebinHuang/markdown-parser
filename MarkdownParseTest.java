@@ -90,7 +90,7 @@ public class MarkdownParseTest {
         String content = Files.readString(fileName);
         ArrayList<String> links = MarkdownParse.getLinks(content);
         ArrayList<String> test = new ArrayList<>();
-        System.out.println("Test7: "+links);
+        System.out.println("Test8: "+links);
         assertEquals(test, links);
     }
     @Test
@@ -99,7 +99,48 @@ public class MarkdownParseTest {
         String content = Files.readString(fileName);
         ArrayList<String> links = MarkdownParse.getLinks(content);
         ArrayList<String> test = new ArrayList<>();
-        System.out.println("Test7: "+links);
+        System.out.println("Test9: "+links);
+        assertEquals(test, links);
+    }
+
+    @Test
+    public void Snippet1test() throws IOException{
+        Path fileName = Path.of("/Users/huanglebin/Documents/GitHub/markdown-parser/lib/Snippet1.md");
+        String content = Files.readString(fileName);
+        ArrayList<String> links = MarkdownParse.getLinks(content);
+        ArrayList<String> test = new ArrayList<>();
+        test.add("url.com");
+        test.add("`google.com");
+        test.add("google.com");
+        test.add("ucsd.edu");
+        System.out.println("Snippet1test: "+links);
+        assertEquals(test, links);
+    }
+
+    @Test
+    public void Snippet2test() throws IOException{
+        Path fileName = Path.of("/Users/huanglebin/Documents/GitHub/markdown-parser/lib/Snippet2.md");
+        String content = Files.readString(fileName);
+        ArrayList<String> links = MarkdownParse.getLinks(content);
+        ArrayList<String> test = new ArrayList<>();
+        test.add("b.com");
+        test.add("a.com(())");
+        test.add("example.com");
+        System.out.println("Snippet2test: "+links);
+        assertEquals(test, links);
+    }
+
+    @Test
+    public void Snippet3test() throws IOException{
+        Path fileName = Path.of("/Users/huanglebin/Documents/GitHub/markdown-parser/lib/Snippet3.md");
+        String content = Files.readString(fileName);
+        ArrayList<String> links = MarkdownParse.getLinks(content);
+        ArrayList<String> test = new ArrayList<>();
+        test.add("https://www.twitter.com");
+        test.add("https://sites.google.com/eng.ucsd.edu/cse-15l-spring-2022/schedule");
+        test.add("github.com");
+        test.add("https://cse.ucsd.edu/");
+        System.out.println("Snippet3test: "+links);
         assertEquals(test, links);
     }
 }
