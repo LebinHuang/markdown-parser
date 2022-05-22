@@ -93,4 +93,37 @@ public class MarkdownParseTest {
         System.out.println("Test7: "+links);
         assertEquals(test, links);
     }
+
+    @Test
+    public void Snippet1test() throws IOException{
+        Path fileName = Path.of("/Users/huanglebin/Documents/GitHub/markdown-parser/lib/Snippet1.md");
+        String content = Files.readString(fileName);
+        ArrayList<String> links = MarkdownParse.getLinks(content);
+        ArrayList<String> test = new ArrayList<>();
+        System.out.println("Test7: "+links);
+        assertEquals(test, links);
+    }
+
+    @Test
+    public void Snippet2test() throws IOException{
+        Path fileName = Path.of("/Users/huanglebin/Documents/GitHub/markdown-parser/lib/Snippet2.md");
+        String content = Files.readString(fileName);
+        ArrayList<String> links = MarkdownParse.getLinks(content);
+        ArrayList<String> test = new ArrayList<>();
+        System.out.println("Test7: "+links);
+        assertEquals(test, links);
+    }
+
+    @Test
+    public void Snippet3test() throws IOException{
+        Path fileName = Path.of("/Users/huanglebin/Documents/GitHub/markdown-parser/lib/Snippet3.md");
+        String content = Files.readString(fileName);
+        ArrayList<String> links = MarkdownParse.getLinks(content);
+        ArrayList<String> test = new ArrayList<>();
+        System.out.println("Test7: "+links);
+        assertEquals(test, links);
+    }
+    
+
+
 }
