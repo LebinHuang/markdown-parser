@@ -109,7 +109,6 @@ public class MarkdownParseTest {
         String content = Files.readString(fileName);
         ArrayList<String> links = MarkdownParse.getLinks(content);
         ArrayList<String> test = new ArrayList<>();
-        test.add("url.com");
         test.add("`google.com");
         test.add("google.com");
         test.add("ucsd.edu");
@@ -123,8 +122,8 @@ public class MarkdownParseTest {
         String content = Files.readString(fileName);
         ArrayList<String> links = MarkdownParse.getLinks(content);
         ArrayList<String> test = new ArrayList<>();
-        test.add("b.com");
-        test.add("a.com(())");
+        test.add("a.com");
+        test.add("a.com(()))");
         test.add("example.com");
         System.out.println("Snippet2test: "+links);
         assertEquals(test, links);
@@ -138,7 +137,6 @@ public class MarkdownParseTest {
         ArrayList<String> test = new ArrayList<>();
         test.add("https://www.twitter.com");
         test.add("https://sites.google.com/eng.ucsd.edu/cse-15l-spring-2022/schedule");
-        test.add("github.com");
         test.add("https://cse.ucsd.edu/");
         System.out.println("Snippet3test: "+links);
         assertEquals(test, links);
