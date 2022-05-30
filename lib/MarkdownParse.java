@@ -12,6 +12,7 @@ public class MarkdownParse {
         // find the next [, then find the ], then find the (, then read link upto next )
         int currentIndex = 0;
         while(currentIndex < markdown.length()) {
+            int test1 = markdown.indexOf("`", 0);
             int openBracket = markdown.indexOf("[", currentIndex);
             int closeBracket = markdown.indexOf("]", openBracket);
             int openParen = markdown.indexOf("(", closeBracket);
@@ -19,9 +20,13 @@ public class MarkdownParse {
             int open = markdown.indexOf("<", currentIndex);
             int close = markdown.indexOf(">", open);
             int test = markdown.indexOf("!",currentIndex);
+            
             if (openBracket != -1 && openParen != -1 && test != openBracket -1) {
                 toReturn.add(markdown.substring(openParen + 1, closeParen));
                 currentIndex = closeParen + 1;
+            }
+            if(test1 <= openBracket){
+                toReturn.remove(0);
             }
             else if (open != -1){
                 toReturn.add(markdown.substring(open + 1, close));
